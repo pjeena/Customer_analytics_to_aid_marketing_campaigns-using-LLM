@@ -121,11 +121,11 @@ elif choose == "Customer modeling":
     with st.form("form_1", clear_on_submit=True):
         url = st.text_input(
             "**:violet[Enter the URL of a product from [Google Shopping](https://shopping.google.com/)]**",
-            "https://www.google.com/shopping/product/r/FR/18319574404477164281?prds=oid:4646493962208907683,eto:4646493962208907683_0,epd:4646493962208907683,prmr:1,rsk:CID_18319574404477164281&rss=ChhDSURfMTgzMTk1NzQ0MDQ0NzcxNjQyODE%3D&hl=en&sa=X&ved=2ahUKEwi9j5OdqK-CAxVMIAYAHUvMB-cQkLoIegQIAhAp",
+            "",
         )
         query = st.text_input(
             "**:violet[Enter relevant query representing product reviews]** *(Example : The shoes/speakers are fantastic)*",
-            "Super mario gameplay with an excellent presentation",
+            "",
         )
         num_reviews = st.slider("**:violet[No of reviews to analyse]**", 0, 100, 20)
         st.write(
