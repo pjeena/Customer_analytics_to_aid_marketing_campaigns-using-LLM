@@ -10,8 +10,3 @@ Want a overall insights and recommendations to improve about the product? With a
 ### :violet[Track Churn/Repeat]:
 Want to identify repeat customers or customers who are likely to churn? Just submit a relevant query and filter by rating to get a downloadable excel sheet of churned/repeat customers with their details. 
 
-### :violet[Tech Stack]:
-Python, Pinecone, Streamlit, Hugging Face, OpenAI, 
-
-#### :violet[GitHub Repository]:
-The entire project is open-source and hosted on [GitHub](https://github.com/pjeena/Customer_insights_to_aid_marketing).
