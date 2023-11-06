@@ -211,7 +211,7 @@ elif choose == "Review Analytics":
             st.session_state.clicked_1 = True
 
         if st.button(
-            "**:violet[Click here to generate overall textual impression of all the reviews]**",
+            "**:violet[Click here to generate overall textual impression and provide suggestions for improvement]**",
             on_click=click_button,
             use_container_width=True,
         ):
