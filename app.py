@@ -218,38 +218,8 @@ elif choose == "Review Analytics":
         if st.session_state.clicked_1:
             st.markdown("{}".format(st.session_state["overall_review"]))
 
-    dash_5 = st.container()
 
-    with dash_5:
-            df_sample = df.copy()
-            df_sample.set_index("date", inplace=True)
-            df_sample.index = pd.to_datetime(df_sample.index)
-            df_cumm_rating = df_sample.rating.resample("4M").mean().reset_index()
-
-            fig = px.area(
-                df_cumm_rating,
-                x="date",
-                y="rating",
-                labels={"date": "Date", "rating": "Average Rating"},
-                title="Average rating over time",
-            )
-            fig.update_layout(
-                #                font_family="Courier New",
-                font_color="black",
-                #                title_font_family="Garamond",
-                title_font_color="black",
-                legend_title_font_color="green",
-            )
-            fig.add_trace(
-                go.Scatter(
-                    x=df_cumm_rating["date"], y=df_cumm_rating["rating"].fillna(0)
-                )
-            )
-            fig.update_layout(showlegend=False)
-            st.plotly_chart(fig, use_container_width=True, theme=None)
-
-
-
+ 
 elif choose == "Track Churn/Repeat":
     #    dash_1 = st.container()
 
