@@ -22,9 +22,9 @@ import os
 st.set_page_config(page_title="AdWiseInsights", page_icon="🧊", layout="wide")
 
 load_dotenv()
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_ENV = os.getenv("PINECONE_ENV")
-OPENAI_API = os.getenv("OPENAI_API")
+PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+PINECONE_ENV = st.secrets["PINECONE_ENV"]
+OPENAI_API = st.secrets["OPENAI_API"]
 
 df = pd.read_parquet("data/product_reviews.parquet")
 df["date"] = pd.to_datetime(df["date"]).dt.date
