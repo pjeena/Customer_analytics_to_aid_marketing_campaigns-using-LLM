@@ -2,8 +2,8 @@ requests
 parsel
 google-search-results
 pandas
-langchain
-openai==1.1.0
+langchain==0.0.330
+openai==0.28.1
 pyarrow
 fastparquet
 sentence-transformers
