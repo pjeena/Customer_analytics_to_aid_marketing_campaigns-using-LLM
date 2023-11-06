@@ -19,6 +19,8 @@ from streamlit_card import card
 from dotenv import load_dotenv
 import os
 
+st.set_page_config(page_title="AdWiseInsights", page_icon="🧊", layout="wide")
+
 load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = os.getenv("PINECONE_ENV")
@@ -57,9 +59,6 @@ df_sentiment = (
     .reset_index()
     .rename(columns={0: "labels", "count": "values"})
 )
-
-
-st.set_page_config(page_title="AdWiseInsights", page_icon="🧊", layout="wide")
 
 
 def display_product_data():
