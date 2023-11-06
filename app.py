@@ -51,15 +51,6 @@ def get_sentiment_model():
 classifier = get_sentiment_model()
 
 
-prediction = classifier(docs, truncation=True)
-df["sentiment"] = [x["label"] for x in prediction]
-df_sentiment = (
-    pd.DataFrame([x["label"] for x in prediction])
-    .value_counts()
-    .reset_index()
-    .rename(columns={0: "labels", "count": "values"})
-)
-
 
 def display_product_data():
     with open("data/product_details.json", "r") as file:
@@ -230,8 +221,6 @@ elif choose == "Review Analytics":
     dash_5 = st.container()
 
     with dash_5:
-        col1, col2 = st.columns([1.5, 1.2])
-        with col1:
             df_sample = df.copy()
             df_sample.set_index("date", inplace=True)
             df_sample.index = pd.to_datetime(df_sample.index)
@@ -259,25 +248,6 @@ elif choose == "Review Analytics":
             fig.update_layout(showlegend=False)
             st.plotly_chart(fig, use_container_width=True, theme=None)
 
-        with col2:
-            fig = go.Figure(
-                data=[
-                    go.Pie(
-                        labels=df_sentiment["labels"],
-                        values=df_sentiment["values"],
-                        hole=0.3,
-                    )
-                ]
-            )
-            fig.update_layout(title="Customer Sentiment Analysis disribution")
-            fig.update_layout(
-                #                font_family="Courier New",
-                font_color="black",
-                #                title_font_family="Garamond",
-                title_font_color="black",
-                legend_title_font_color="green",
-            )
-            st.plotly_chart(fig, use_container_width=True, theme=None)
 
 
 elif choose == "Track Churn/Repeat":
