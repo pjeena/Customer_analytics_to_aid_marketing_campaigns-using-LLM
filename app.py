@@ -153,7 +153,7 @@ elif choose == "Customer modeling":
         on_click=click_button,
         use_container_width=True,
     ):
-        if url != "" and query != "":
+        if url != "" and query != "" and OPENAI_API.startswith('sk-'):
             summary, advertisement = "text", "text"
             summary, advertisement = main.main(query, num_reviews, rating)
 
