@@ -377,23 +377,6 @@ elif choose == "Track Churn/Repeat":
 
 
 elif choose == "Contact":
-    res = card(
-        title="",
-        text="",
-        image="https://webneel.com/wallpaper/sites/default/files/images/08-2018/3-nature-wallpaper-mountain.1440.jpg",
-        styles={
-            "card": {
-                "width": "900px",
-                "height": "250px",
-                "border-radius": "20px",
-            },
-            "text": {
-                "font-family": "serif",
-            },
-        },
-        on_click=lambda: print("Clicked!"),
-    )
-
     with open("docs/intro.md", "r") as f:
         st.info(f.read())
 
