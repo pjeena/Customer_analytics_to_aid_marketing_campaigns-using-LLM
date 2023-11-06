@@ -3,7 +3,7 @@
 
 Revusense is an AI assitant platform that aims to help businesses gather and analyze customer reviews from Google Shopping and generate a comprehensive summary of the reviews filtered by an input query and rating. It provides tools to create advertisement copy based on the gathered insights, allowing businesses to scale their marketing efforts across different platforms. Additionally, it can also be levereaged to filter churned/repeat customers for personalized marketing emails. 
 
-![alt text](https://github.com/pjeena/Customer_insights_to_aid_marketing/blob/main/docs/app.jpg)
+![alt text](https://github.com/pjeena/Customer_insights_to_aid_marketing/blob/main/docs/app.jpeg)
 
 ## Project description
 
