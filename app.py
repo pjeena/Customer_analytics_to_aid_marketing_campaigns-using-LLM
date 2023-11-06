@@ -171,11 +171,12 @@ elif choose == "Customer modeling":
                 icon="⚠️",
             )
 
-    if st.session_state.clicked:
-        st.markdown("**:green[Summary]** : *{}*".format(st.session_state["summary"]))
-        st.markdown(
-            "**:green[Advertisement]** : *{}*".format(st.session_state["advertisement"])
-        )
+    if OPENAI_API.startswith('sk-'):
+        if st.session_state.clicked:
+            st.markdown("**:green[Summary]** : *{}*".format(st.session_state["summary"]))
+            st.markdown(
+                "**:green[Advertisement]** : *{}*".format(st.session_state["advertisement"])
+            )
 
 
 elif choose == "Review Analytics":
