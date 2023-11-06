@@ -149,7 +149,7 @@ elif choose == "Customer modeling":
         st.session_state.clicked = True
 
     if st.button(
-        "**Click here to get a summary of reviews and an advertisement copy for personalized marketing**",
+        "**:violet[Click here to get a summary of reviews and an advertisement copy for personalized marketing]**",
         on_click=click_button,
         use_container_width=True,
     ):
