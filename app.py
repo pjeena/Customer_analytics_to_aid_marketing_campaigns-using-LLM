@@ -106,6 +106,13 @@ if choose == "About":
 
     with open("docs/main.md", "r") as f:
         st.info(f.read())
+    st.success(
+        """
+                **Tech Stack** : Python, Pinecone, Streamlit, Hugging Face, OpenAI \n
+                The entire project is open-source and hosted on [GitHub](https://github.com/pjeena/Customer_insights_to_aid_marketing).
+        
+        """
+    )
 
 
 elif choose == "Customer modeling":
