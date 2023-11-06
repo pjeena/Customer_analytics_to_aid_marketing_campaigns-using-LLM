@@ -108,7 +108,7 @@ if choose == "About":
         st.info(f.read())
     st.success(
         """
-                **Tech Stack** : Python, Pinecone, Streamlit, Hugging Face, OpenAI \n
+                **Tech Stack** : Python, Pinecone, Langchain, Streamlit, Hugging Face, OpenAI \n
                 The entire project is open-source and hosted on [GitHub](https://github.com/pjeena/Customer_insights_to_aid_marketing).
         
         """
