@@ -185,7 +185,7 @@ elif choose == "Review Analytics":
     with dash_2:
         col1, col2, col3 = st.columns(3)
 
-        col1.metric(label="No of Reviews", value=num_of_reviews)
+        col1.metric(label="No of relevant Reviews", value=num_of_reviews)
         col2.metric(label="Average Rating", value=np.round(average_rating, 2))
         col3.metric(
             label="No of e-commerce outlets registered",
