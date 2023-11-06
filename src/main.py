@@ -6,7 +6,6 @@ from langchain.embeddings import HuggingFaceEmbeddings
 import pinecone
 from langchain.vectorstores import Pinecone
 from langchain.embeddings import HuggingFaceEmbeddings
-from retry import retry
 import pickle
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
