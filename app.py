@@ -153,8 +153,7 @@ elif choose == "Customer modeling":
         on_click=click_button,
         use_container_width=True,
     ):
-        if url != "" and query != "" and OPENAI_API.startswith('sk-'):
-            st.write(OPENAI_API)
+        if url != "" and query != "":
             summary, advertisement = "text", "text"
             summary, advertisement = main.main(query, num_reviews, rating)
 
@@ -172,8 +171,8 @@ elif choose == "Customer modeling":
                 icon="⚠️",
             )
 
-    if OPENAI_API.startswith('sk-'):
-        if st.session_state.clicked:
+#    if OPENAI_API.startswith('sk-'):
+    if st.session_state.clicked:
             st.markdown("**:green[Summary]** : *{}*".format(st.session_state["summary"]))
             st.markdown(
                 "**:green[Advertisement]** : *{}*".format(st.session_state["advertisement"])
