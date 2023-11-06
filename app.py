@@ -167,7 +167,7 @@ elif choose == "Customer modeling":
 
         else:
             st.warning(
-                "Enter a URL and query regarding a product from Google Shopping",
+                "Enter OPENAI API key or URL/query regarding a product from Google Shopping",
                 icon="⚠️",
             )
 
