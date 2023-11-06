@@ -91,10 +91,10 @@ with st.sidebar:
         default_index=0,
     )
 
-    if choose != "About" and choose != "Contact":
-        OPENAI_API = st.text_input(
-            "Enter **OpenAI API Key**", key="chatbot_api_key", type="password"
-        )
+#    if choose != "About" and choose != "Contact":
+#        OPENAI_API = st.text_input(
+#            "Enter **OpenAI API Key**", key="chatbot_api_key", type="password"
+#        )
 
 
 if choose == "About":
