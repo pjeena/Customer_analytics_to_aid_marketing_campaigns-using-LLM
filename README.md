@@ -32,7 +32,7 @@ An overall and comprehensive overview can be obtained with a simple click. It wi
 
 ### 4. Churn/Repeat customers:
 
-The AI assitant can also be used to identify churn/repeat customers by just giving natural language instructions. This can be a game changer in building a POC by focusing on the qualitative unstructured data that is easily available to improve customer retention and company's valuation.
+The AI assitant can also be used to identify churn/repeat customers by just giving natural language instructions. This can be a game changer in building a POC by focusing on the qualitative unstructured data that is easily available to improve customer retention in a business.
 
 
 
