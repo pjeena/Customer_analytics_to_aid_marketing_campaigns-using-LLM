@@ -99,7 +99,7 @@ with st.sidebar:
 
 if choose == "About":
     st.title(
-        ":speech_balloon: AdWiseInsights \n\n *Customer Insights to aid marketing campaigns at your Fingertips*"
+        ":speech_balloon: RevuSense \n\n *Customer Insights to aid marketing campaigns at your Fingertips*"
     )
     #    with open("news.md", "r") as f:
     #        st.success(f.read())
