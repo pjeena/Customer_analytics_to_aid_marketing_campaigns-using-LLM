@@ -23,7 +23,7 @@ This component is responsible for scraping customer reviews from Google Shopping
 
 ### 2. Generating Summaries and an Advertisement (Customer Modeling):
 
-Once the reviews are collected, we create a vector store using pinecone python client to store the vector embeddings(hugging face) generated from reviews. After that, LangChain is used to generate a summary that highlights the most significant insights and sentiments expressed in the reviews. Here, gpt-4 LLM is used to generate summaries and Advertisement. This summary can be a valuable resource for understanding customer sentiment  based on a query related to the product and to improve marketing strategies and reach a broader audience. Here, gpt-4 model is used to generate summaries and Advertisement. One can tune the parameters to generate the output more relevant to the specific product.
+Once the reviews are collected, we create a **vector database** using pinecone python client to store the vector embeddings(hugging face) generated from reviews. After that, LangChain is used to generate a summary that highlights the most significant insights and sentiments expressed in the reviews. Here, gpt-4 LLM is used to generate summaries and Advertisement. This summary can be a valuable resource for understanding customer sentiment  based on a query related to the product and to improve marketing strategies and reach a broader audience. Here, gpt-4 model is used to generate summaries and Advertisement. One can tune the parameters to generate the output more relevant to the specific product.
 
 ### 3. Review Analytics:
 
