@@ -45,7 +45,7 @@ def get_product_page_results(url, params, headers):
 
 
 def main(URL_local):
-    # https://docs.python-requests.org/en/master/user/quickstart/#passing-parameters-in-urls
+    
     product_id = URL_local.split("/")[-1].split("?")[0]
 
     params = {
@@ -54,7 +54,7 @@ def main(URL_local):
         "gl": "fr",  # country of the search, US -> USA
     }
 
-    # https://docs.python-requests.org/en/master/user/quickstart/#custom-headers
+    
     user_agent_list = [
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15",
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
