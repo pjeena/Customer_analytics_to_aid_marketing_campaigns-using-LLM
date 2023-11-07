@@ -1,5 +1,5 @@
 
-# RevuSense
+# ReviewSense
 
 Revusense is an AI assitant platform that aims to help businesses gather and analyze customer reviews from Google Shopping and generate a comprehensive summary of the reviews filtered by an input query and rating with the help of SOTA LLM models. It provides tools to create advertisement copy based on the gathered insights, allowing businesses to scale their marketing efforts across different platforms. Additionally, it can also be levereaged to filter churned/repeat customers for personalized marketing emails. 
 
