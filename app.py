@@ -137,7 +137,8 @@ elif choose == "Customer modeling":
         rating = st.radio("**:violet[Rating]**", [1.0, 2.0, 3.0, 4.0, 5.0], 4)
         submitted = st.form_submit_button("**Submit**")
         if submitted:
-            main.get_product_details_and_reviews(url)
+            with st.spinner('**Fetching product details and scraping reviews...**'):
+                main.get_product_details_and_reviews(url)
 
     if url != "":
         display_product_data()
@@ -154,16 +155,17 @@ elif choose == "Customer modeling":
         use_container_width=True,
     ):
         if url != "" and query != "":
-            summary, advertisement = "text", "text"
-            summary, advertisement = main.main(query, num_reviews, rating)
-
-            #            st.markdown("**:green[Summary]** : *{}*".format(summary))
-            #            st.markdown("**:green[Advertisement]** : *{}*".format(advertisement))
-
-            if "summary" not in st.session_state:
-                st.session_state["summary"] = summary
-            if "advertisement" not in st.session_state:
-                st.session_state["advertisement"] = advertisement
+            with st.spinner('**Generating embeddings, uploading to vector database and generating summary...**'):
+#            summary, advertisement = "text", "text"
+                summary, advertisement = main.main(query, num_reviews, rating)
+    
+                #            st.markdown("**:green[Summary]** : *{}*".format(summary))
+                #            st.markdown("**:green[Advertisement]** : *{}*".format(advertisement))
+    
+                if "summary" not in st.session_state:
+                    st.session_state["summary"] = summary
+                if "advertisement" not in st.session_state:
+                    st.session_state["advertisement"] = advertisement
 
         else:
             st.warning(
@@ -215,13 +217,14 @@ elif choose == "Review Analytics":
             on_click=click_button,
             use_container_width=True,
         ):
-            overall_review = main.generate_review_analytics(
-                product=product_details["title"]
-            )
-            # overall_review = "fgfg"
-            if "overall_review" not in st.session_state:
-                st.session_state["overall_review"] = overall_review
-        #           st.markdown(overall_review)
+            with st.spinner('**Generating overall summary and ideas for improvement...**'):
+                overall_review = main.generate_review_analytics(
+                    product=product_details["title"]
+                )
+                # overall_review = "fgfg"
+                if "overall_review" not in st.session_state:
+                    st.session_state["overall_review"] = overall_review
+            #           st.markdown(overall_review)
 
         if st.session_state.clicked_1:
             st.markdown("{}".format(st.session_state["overall_review"]))
@@ -272,38 +275,39 @@ elif choose == "Track Churn/Repeat":
             on_click=click_button,
         ):
             if query != "":
-                df_customer_list = main.generate_churn_and_repeat_customers(
-                    query, rating
-                )
-
-                # style
-                th_props = [
-                    ("font-size", "14px"),
-                    ("text-align", "center"),
-                    ("font-weight", "bold"),
-                    ("color", "#6d6d6d"),
-                    ("background-color", "#f7ffff"),
-                ]
-
-                td_props = [("font-size", "12px")]
-
-                styles = [
-                    dict(selector="th", props=th_props),
-                    dict(selector="td", props=td_props),
-                ]
-
-                # table
-                df_customer_list_table = (
-                    df_customer_list.style.set_properties(**{"text-align": "left"})
-                    .set_table_styles(styles)
-                    .hide(axis="index")
-                )
-
-                if "df_customer_list_table" not in st.session_state:
-                    st.session_state["df_customer_list_table"] = df_customer_list_table
-
-                if "df_customer_list" not in st.session_state:
-                    st.session_state["df_customer_list"] = df_customer_list
+                with st.spinner('**Generating list of churned/repeat customers...**'):
+                    df_customer_list = main.generate_churn_and_repeat_customers(
+                        query, rating
+                    )
+    
+                    # style
+                    th_props = [
+                        ("font-size", "14px"),
+                        ("text-align", "center"),
+                        ("font-weight", "bold"),
+                        ("color", "#6d6d6d"),
+                        ("background-color", "#f7ffff"),
+                    ]
+    
+                    td_props = [("font-size", "12px")]
+    
+                    styles = [
+                        dict(selector="th", props=th_props),
+                        dict(selector="td", props=td_props),
+                    ]
+    
+                    # table
+                    df_customer_list_table = (
+                        df_customer_list.style.set_properties(**{"text-align": "left"})
+                        .set_table_styles(styles)
+                        .hide(axis="index")
+                    )
+    
+                    if "df_customer_list_table" not in st.session_state:
+                        st.session_state["df_customer_list_table"] = df_customer_list_table
+    
+                    if "df_customer_list" not in st.session_state:
+                        st.session_state["df_customer_list"] = df_customer_list
 
             else:
                 st.warning("Enter a query relevant to the product", icon="⚠️")
