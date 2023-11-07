@@ -1,5 +1,5 @@
 ## :violet[About the App and Its Features]:
-RevuSense is a cutting-edge AI assistant tailored for the marketing department for any business which lists products at e-commerce websites. It streamlines the process of gaining crucial insights and feedback, generate summaries and advertisement, extract churned/repeat customers from customer reviews about a product(listed on Google shopping) in a user-friendly manner.
+ReviewSense is a cutting-edge AI assistant tailored for the marketing department for any business which lists products at e-commerce websites. It streamlines the process of gaining crucial insights and feedback, generate summaries and advertisement, extract churned/repeat customers from customer reviews about a product(listed on Google shopping) in a user-friendly manner.
 
 ### :violet[Customer Modeling]: 
 Simply enter the url of a product listed on [Google Shopping](https://shopping.google.com/) and a relevant query regarding it. You can also choose a rating. After submitting the details, get a summary and an advertisement copy with a simple click. The ad copy can be used to scale advertising across various platforms. 
