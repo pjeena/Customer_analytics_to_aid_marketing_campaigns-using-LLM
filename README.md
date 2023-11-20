@@ -5,8 +5,7 @@ ReviewSense is an AI assitant platform that aims to help businesses gather and a
 
 
 
-https://github.com/pjeena/Customer_analytics_to_aid_marketing_campaigns-using-LLM/assets/56345075/30b12057-c7b8-41ae-993e-2c7b47217fa6
-
+https://github.com/pjeena/Customer_analytics_to_aid_marketing_campaigns-using-LLM/blob/main/demo.mp4
 
 
 
